@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+body{
+    font-family: sans-serif;
+    overflow-x: hidden;
+    background: linear-gradient(#39519f, #3939e7);
+    background-repeat: no-repeat;
+    z-index: -999;
+}
+img{
+    display: block;
+    width: 100%;
+}
+.container{
+    max-width: 80rem;
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* ...............Start Nav............. */
+nav{
+    width: 100%;
+    height: 5rem;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 50;     
+}
+.nav-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    max-width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.nav-links{
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+.nav-links li a{
+    display: inline-block;
+    color: white;
+    font-size: 1.05rem;
+    padding: .7rem 1.2rem;
+    font-weight: 500;
+    line-height: 1;
+    border-radius: 2rem;
+    transition: .4s ease;
+}
+.nav-links li .active,
+.nav-links li a:hover{
+    background: white;
+    color: #3939e7;
+}
+
+/* ...............Start Header............. */
+
+header{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+header img{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    object-fit: cover;
+    user-select: none;
+}
+header #base{
+    z-index: 6;
+}
+header h1{
+    position: absolute;
+    color: white;
+    font-size: clamp(3rem, 7.5vw, 8rem );
+    letter-spacing: 3px;
+    white-space: nowrap;
+    z-index: 5;
+    right: -850px;
+}
+header .btn{
+    display: inline-block;
+    color: white;
+    font-size: 1.05rem;
+    padding: 10px 30px;
+    font-weight: 500;   
+    border-radius: 2rem;
+    transition: .4s ease;
+    position: absolute;
+    z-index: 100;
+    transform: translateY(200px);
+    border: 2px solid white;    
+}
+header .btn:hover{
+    background: white;
+    color: #3939e7;
+}
+
+/*.............. Extra Text............. */
+section{
+    padding: 4rem 0;
+    background: white;
+}
+h2{
+    font-size: 3rem;
+    margin-bottom: 3rem;
+}
+p{
+    margin-bottom: 1rem;
+    line-height: 150%;
+}

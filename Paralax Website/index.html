@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax Website</title>
+    <!-- ................Custom Css Link............... -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- .....................Start Nav................ -->
+    <nav>
+        <div class="container nav-container">
+            <div class="logo">
+                <img src="./img/logo.png" alt="">
+            </div>
+            <ul class="nav-links">
+                <li><a href="" class="active">Home</a></li>                
+                <li><a href="">About</a></li>                
+                <li><a href="">Services</a></li>                
+                <li><a href="">Contact</a></li>                
+            </ul>
+        </div>
+    </nav>
+    <!-- .....................End Nav................ -->
+
+    <!-- .....................Start Header................ -->
+    <header>        
+        <img src="./img/1.png" class="translateX" data-speed="0.25" alt="" id="moon">
+        <img src="./img/2.png" class="translateY" data-speed="0.35" alt="" id="clouds">
+        <img src="./img/3.png" class="translateY" data-speed="0.15" alt="" id="mount">
+        <h1 class="translateX" data-speed="-3">Discover New Horizons</h1>
+        <a href="" class="btn">Explore</a>
+        <img src="./img/4.png"  class="translateY" data-speed="0"  alt="" id="base">        
+    </header>
+    <!-- .....................End Header................ -->
+
+
+    <!-- .....................Extra Text................ -->
+    <section>
+        <div class="container">
+            <h2>Parallax Scroll Website</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores ullam eveniet recusandae numquam, adipisci nesciunt architecto illo. Similique adipisci sequi natus, aliquam a, in saepe architecto reprehenderit dignissimos iure sed est! Quibusdam voluptatibus praesentium incidunt fuga, atque placeat. Totam praesentium laudantium optio vitae incidunt id natus. Numquam culpa laborum modi corporis aliquid consequuntur itaque vero nihil dignissimos fugit! Earum iusto doloribus, quo magnam nostrum maxime dolores, esse cum corporis quibusdam ipsam error dolor veniam a quam reprehenderit ut repellat? Fuga rerum molestias, vitae tempora soluta quo nulla suscipit labore quam sequi eos laborum consequuntur, facilis sed. Ullam, laudantium! Expedita laudantium animi voluptatem, exercitationem voluptatum quos perspiciatis suscipit vitae eveniet molestiae, voluptatibus non architecto omnis. Officiis vitae officia autem eum voluptatum.</p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam vitae, ex dignissimos blanditiis est, corrupti pariatur illo fuga, laudantium quibusdam numquam! Saepe libero doloribus, nisi excepturi, reiciendis sunt totam ipsum facere deleniti alias tempora ipsa eveniet corrupti officiis magnam voluptas nesciunt eum. Explicabo est odio aliquam mollitia libero soluta, amet magnam molestias fugiat quia, debitis maxime tempore rem adipisci quis. Dolore, placeat animi, voluptas voluptate ut mollitia quasi totam dolorum iure reprehenderit quaerat delectus impedit sunt ipsa vel consequatur adipisci nostrum quos assumenda exercitationem. Esse quasi expedita, nostrum ducimus iste quis optio mollitia minima maxime vitae libero facere sunt laborum assumenda, itaque autem, perspiciatis error ipsum voluptates. Accusantium, ab debitis sapiente iste consectetur voluptate aperiam labore, saepe quaerat voluptatum similique distinctio. Veritatis voluptatibus fugit saepe ut adipisci qui consectetur aperiam dolorum? Iure accusantium modi vitae suscipit beatae culpa fugit, inventore possimus aut quod minima quaerat deserunt cupiditate, praesentium cumque fuga placeat tempore distinctio accusamus error natus eaque. Enim, accusamus. Asperiores, quae magni voluptatibus fugit eum illum! Hic temporibus facere ipsam ab saepe, sint quos, atque velit impedit minima adipisci. Adipisci voluptas eveniet ea neque. Voluptatum explicabo cupiditate aliquid perspiciatis vero deleniti cumque nam sapiente assumenda iusto molestias totam tempore, maxime libero quaerat obcaecati doloremque sunt deserunt eum error? In nam voluptas quidem nulla nihil? Voluptate, nam dicta amet nihil eaque sint modi, labore rem, officia delectus illum mollitia et unde? Fugiat repellat eveniet, cupiditate magni quisquam aliquam! Quam aspernatur, atque voluptas totam adipisci deserunt vel nesciunt quasi reprehenderit! Aspernatur minima itaque cum ullam a obcaecati vitae est iure illo, laborum veritatis, doloremque omnis dolor aut provident voluptates in labore, nesciunt pariatur rem eius laudantium maxime? Voluptate voluptatem eius vitae doloremque perspiciatis cumque? At mollitia molestias consequatur magni atque, fugiat asperiores natus fuga a velit libero? Fugiat consequuntur rem porro nam fuga omnis, at nostrum sint aliquid blanditiis, molestias vero ipsam pariatur quis quod enim possimus incidunt et reiciendis. Eveniet odio facilis et, temporibus qui, recusandae laudantium dolorem dignissimos distinctio quisquam magnam nisi aliquam excepturi maxime. Ex culpa, accusamus natus cumque exercitationem laboriosam omnis eveniet mollitia tempora dolorum, modi repellat quidem numquam ipsam fugit consequuntur nostrum perferendis laudantium necessitatibus! Libero, incidunt. Eveniet ducimus nemo architecto excepturi laborum praesentium, possimus harum minima voluptates est, suscipit, voluptate molestiae. Rerum asperiores illum repellat unde temporibus possimus exercitationem excepturi qui nisi eveniet quae inventore sit aperiam, autem odit sapiente quia nulla, ex velit, ratione incidunt!
+            </p>
+        </div>
+    </section> 
+
+
+    <!-- .....................Start Script................ -->
+    <script>
+        const translateX = document.querySelectorAll('.translateX');
+        const translateY = document.querySelectorAll('.translateY');
+
+        window.addEventListener('scroll',()=>{
+            let scroll = window.pageYOffset;
+            translateX.forEach(element=>{
+                let speed =element.dataset.speed;
+                element.style.transform = `translateX(${scroll * speed}px)`
+            });
+            translateY.forEach(element=>{
+                let speed =element.dataset.speed;
+                element.style.transform = `translateY(${scroll * speed}px)`
+            });
+        })
+    </script>
+</body>
+</html>
